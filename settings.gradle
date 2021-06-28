@@ -1,0 +1,3 @@
+rootProject.name = "EasyLibrary"
+include ':app'
+include ':easyutil'
