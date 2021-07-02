@@ -9,7 +9,7 @@ import android.view.animation.Animation;
  * EasyAnimation
  * @author llw
  */
-public class EasyAnimation {
+public final class EasyAnimation {
 
     /**
      * 开始眨眼动画

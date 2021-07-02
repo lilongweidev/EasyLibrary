@@ -7,19 +7,25 @@ import android.widget.Toast;
  * EasyToast
  * @author llw
  */
-public class EasyToast {
+public final class EasyToast {
+
+    private static Context mContext;
+
+    public static void init(Context context) {
+        mContext = context;
+    }
 
     /**
      * Toast
      */
-    public static void show(final Context context, final CharSequence text) {
-        Toast.makeText(context, text, Toast.LENGTH_SHORT).show();
+    public static void show(final CharSequence text) {
+        Toast.makeText(mContext, text, Toast.LENGTH_SHORT).show();
     }
 
     /**
      * LongToast
      */
-    public static void showLong(final Context context, final CharSequence text) {
-        Toast.makeText(context, text, Toast.LENGTH_LONG).show();
+    public static void showLong(final CharSequence text) {
+        Toast.makeText(mContext, text, Toast.LENGTH_LONG).show();
     }
 }

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <color name="transparent">#00000000</color>
+    <color name="white">#FFF</color>
+    <color name="black">#000</color>
+    <color name="red">#FF0000</color>
+    <color name="green">#00FF00</color>
+    <color name="blue">#0000FF</color>
+    <color name="orange">#FF9600</color>
+    <color name="yellow">#FFFF00</color>
+
+    <color name="white_2">#20FFFFFF</color><!--白色 透明度 %20-->
+    <color name="white_4">#40FFFFFF</color>
+    <color name="white_6">#60FFFFFF</color>
+    <color name="white_8">#80FFFFFF</color>
+    <color name="black_2">#20000000</color><!--黑色 透明度 %20-->
+    <color name="black_4">#40000000</color>
+    <color name="black_6">#60000000</color>
+    <color name="black_8">#80000000</color>
+
+    <color name="line">#EEE</color><!--分隔线-->
+
+</resources>

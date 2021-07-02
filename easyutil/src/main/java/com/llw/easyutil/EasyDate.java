@@ -14,7 +14,7 @@ import java.util.TimeZone;
  *
  * @author llw
  */
-public class EasyDate {
+public final class EasyDate {
 
     public static final String STANDARD_TIME = "yyyy-MM-dd HH:mm:ss";
     public static final String FULL_TIME = "yyyy-MM-dd HH:mm:ss.SSS";
