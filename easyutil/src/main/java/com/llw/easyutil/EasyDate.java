@@ -43,6 +43,7 @@ public final class EasyDate {
 
     /**
      * 获取标准时间
+     *
      * @return 例如 2021-07-01 10:35:53
      */
     public static String getDateTime() {
@@ -51,6 +52,7 @@ public final class EasyDate {
 
     /**
      * 获取完整时间
+     *
      * @return 例如 2021-07-01 10:37:00.748
      */
     public static String getFullDateTime() {
@@ -59,6 +61,7 @@ public final class EasyDate {
 
     /**
      * 获取年月日(今天)
+     *
      * @return 例如 2021-07-01
      */
     public static String getTheYearMonthAndDay() {
@@ -67,6 +70,7 @@ public final class EasyDate {
 
     /**
      * 获取年月日
+     *
      * @return 例如 2021年07月01号
      */
     public static String getTheYearMonthAndDayCn() {
@@ -75,6 +79,7 @@ public final class EasyDate {
 
     /**
      * 获取时分秒
+     *
      * @return 例如 10:38:25
      */
     public static String getHoursMinutesAndSeconds() {
@@ -83,6 +88,7 @@ public final class EasyDate {
 
     /**
      * 获取时分秒
+     *
      * @return 例如 10时38分50秒
      */
     public static String getHoursMinutesAndSecondsCn() {
@@ -91,6 +97,7 @@ public final class EasyDate {
 
     /**
      * 获取年
+     *
      * @return 例如 2021
      */
     public static String getYear() {
@@ -99,6 +106,7 @@ public final class EasyDate {
 
     /**
      * 获取月
+     *
      * @return 例如 07
      */
     public static String getMonth() {
@@ -107,6 +115,7 @@ public final class EasyDate {
 
     /**
      * 获取天
+     *
      * @return 例如 01
      */
     public static String getDay() {
@@ -115,6 +124,7 @@ public final class EasyDate {
 
     /**
      * 获取小时
+     *
      * @return 例如 10
      */
     public static String getHour() {
@@ -123,6 +133,7 @@ public final class EasyDate {
 
     /**
      * 获取分钟
+     *
      * @return 例如 40
      */
     public static String getMinute() {
@@ -131,6 +142,7 @@ public final class EasyDate {
 
     /**
      * 获取秒
+     *
      * @return 例如 58
      */
     public static String getSecond() {
@@ -139,6 +151,7 @@ public final class EasyDate {
 
     /**
      * 获取毫秒
+     *
      * @return 例如 666
      */
     public static String getMilliSecond() {
@@ -147,6 +160,7 @@ public final class EasyDate {
 
     /**
      * 获取时间戳
+     *
      * @return 例如 1625107306051
      */
     public static long getTimestamp() {
@@ -155,6 +169,7 @@ public final class EasyDate {
 
     /**
      * 将时间转换为时间戳
+     *
      * @param time 例如 2021-07-01 10:44:11
      * @return 1625107451000
      */
@@ -171,6 +186,7 @@ public final class EasyDate {
 
     /**
      * 将时间戳转换为时间
+     *
      * @param timeMillis 例如 1625107637084
      * @return 例如 2021-07-01 10:47:17
      */
@@ -180,6 +196,7 @@ public final class EasyDate {
 
     /**
      * 获取今天是星期几
+     *
      * @return 例如 星期四
      */
     public static String getTodayOfWeek() {
@@ -194,6 +211,7 @@ public final class EasyDate {
 
     /**
      * 根据输入的日期时间计算是星期几
+     *
      * @param dateTime 例如 2021-06-20
      * @return 例如 星期日
      */
@@ -219,6 +237,7 @@ public final class EasyDate {
 
     /**
      * 获取输入日期的昨天
+     *
      * @param date 例如 2021-07-01
      * @return 例如 2021-06-30
      */
@@ -227,11 +246,12 @@ public final class EasyDate {
         calendar.setTime(date);
         calendar.add(Calendar.DATE, -1);
         date = calendar.getTime();
-        return new SimpleDateFormat(YEAR_MONTH_DAY,Locale.getDefault()).format(date);
+        return new SimpleDateFormat(YEAR_MONTH_DAY, Locale.getDefault()).format(date);
     }
 
     /**
      * 获取输入日期的明天
+     *
      * @param date 例如 2021-07-01
      * @return 例如 2021-07-02
      */
@@ -240,11 +260,12 @@ public final class EasyDate {
         calendar.setTime(date);
         calendar.add(Calendar.DATE, +1);
         date = calendar.getTime();
-        return new SimpleDateFormat(YEAR_MONTH_DAY,Locale.getDefault()).format(date);
+        return new SimpleDateFormat(YEAR_MONTH_DAY, Locale.getDefault()).format(date);
     }
 
     /**
      * 根据年月日计算是星期几并与当前日期判断  非昨天、今天、明天 则以星期显示
+     *
      * @param dateTime 例如 2021-07-03
      * @return 例如 星期六
      */
@@ -264,5 +285,35 @@ public final class EasyDate {
             dayInfo = getWeek(dateTime);
         }
         return dayInfo;
+    }
+
+    /**
+     * 获取本月天数
+     * @return 例如 31
+     */
+    public static int getCurrentMonthDays() {
+        Calendar calendar = Calendar.getInstance();
+        //把日期设置为当月第一天
+        calendar.set(Calendar.DATE, 1);
+        //日期回滚一天，也就是最后一天
+        calendar.roll(Calendar.DATE, -1);
+        return calendar.get(Calendar.DATE);
+    }
+
+    /**
+     * 获得指定月的天数
+     * @param year 例如 2021
+     * @param month 例如 7
+     * @return 例如 31
+     */
+    public static int getMonthDays(int year, int month) {
+        Calendar calendar = Calendar.getInstance();
+        calendar.set(Calendar.YEAR, year);
+        calendar.set(Calendar.MONTH, month - 1);
+        //把日期设置为当月第一天
+        calendar.set(Calendar.DATE, 1);
+        //日期回滚一天，也就是最后一天
+        calendar.roll(Calendar.DATE, -1);
+        return calendar.get(Calendar.DATE);
     }
 }
