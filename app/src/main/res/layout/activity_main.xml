@@ -4,26 +4,48 @@
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
     android:layout_height="match_parent"
-    android:gravity="center"
     android:orientation="vertical"
-    tools:context=".MainActivity">
+    tools:context=".ui.MainActivity">
 
-    <TextView
-        android:id="@+id/tv_blink"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="Hello World!" />
+    <androidx.appcompat.widget.Toolbar
+        android:layout_width="match_parent"
+        android:layout_height="?attr/actionBarSize"
+        android:background="@color/green_1">
 
-    <Button
-        android:id="@+id/btn_start"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:layout_marginTop="20dp"
-        android:text="开始" />
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center"
+            android:text="@string/app_name"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_18"
+            android:textStyle="bold" />
+    </androidx.appcompat.widget.Toolbar>
 
-    <Button
-        android:id="@+id/btn_stop"
-        android:layout_width="wrap_content"
-        android:layout_height="wrap_content"
-        android:text="停止" />
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical">
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_datetime_used"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawableTop="@drawable/ic_time_white"
+            android:gravity="center"
+            android:insetLeft="@dimen/dp_0"
+            android:insetTop="@dimen/dp_0"
+            android:insetRight="@dimen/dp_0"
+            android:insetBottom="@dimen/dp_0"
+            android:paddingStart="@dimen/dp_0"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_0"
+            android:text="DateTime"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_14"
+            app:cornerRadius="@dimen/dp_12" />
+    </LinearLayout>
+
 </LinearLayout>

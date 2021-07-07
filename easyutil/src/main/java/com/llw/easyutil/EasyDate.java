@@ -78,6 +78,15 @@ public final class EasyDate {
     }
 
     /**
+     * 获取年月日
+     * @param delimiter 分隔符
+     * @return 例如 2021年07月01号
+     */
+    public static String getTheYearMonthAndDayDelimiter(CharSequence delimiter) {
+        return new SimpleDateFormat(YEAR + delimiter + MONTH + delimiter + DAY, Locale.CHINESE).format(new Date());
+    }
+
+    /**
      * 获取时分秒
      *
      * @return 例如 10:38:25
@@ -93,6 +102,15 @@ public final class EasyDate {
      */
     public static String getHoursMinutesAndSecondsCn() {
         return new SimpleDateFormat(HOUR_MINUTE_SECOND_CN, Locale.CHINESE).format(new Date());
+    }
+
+    /**
+     * 获取时分秒
+     * @param delimiter 分隔符
+     * @return 例如 2021/07/01
+     */
+    public static String getHoursMinutesAndSecondsDelimiter(CharSequence delimiter) {
+        return new SimpleDateFormat(HOUR + delimiter + MINUTE + delimiter + SECOND, Locale.CHINESE).format(new Date());
     }
 
     /**
@@ -289,6 +307,7 @@ public final class EasyDate {
 
     /**
      * 获取本月天数
+     *
      * @return 例如 31
      */
     public static int getCurrentMonthDays() {
@@ -302,7 +321,8 @@ public final class EasyDate {
 
     /**
      * 获得指定月的天数
-     * @param year 例如 2021
+     *
+     * @param year  例如 2021
      * @param month 例如 7
      * @return 例如 31
      */

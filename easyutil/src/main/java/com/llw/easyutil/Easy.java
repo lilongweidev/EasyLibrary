@@ -7,7 +7,7 @@ import android.content.SharedPreferences;
  * Easy
  * @author llw
  */
-public final class Easy {
+public class Easy {
 
     private static Context mContext;
 

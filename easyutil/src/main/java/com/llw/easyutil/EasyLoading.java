@@ -7,7 +7,7 @@ import android.content.Context;
  * Easy Loading
  * @author llw
  */
-public final class EasyLoading  extends Dialog {
+public final class EasyLoading extends Dialog {
 
     public EasyLoading(Context context) {
         super(context);

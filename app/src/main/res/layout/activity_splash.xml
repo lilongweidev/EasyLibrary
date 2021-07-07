@@ -1,0 +1,39 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:gravity="center"
+    android:orientation="vertical"
+    tools:context=".ui.SplashActivity">
+
+    <ImageView
+        android:scaleType="centerCrop"
+        android:layout_width="@dimen/dp_120"
+        android:layout_height="@dimen/dp_120"
+        android:src="@drawable/ic_easy_logo" />
+
+    <RelativeLayout
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="@dimen/dp_20">
+
+        <TextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Easy Library"
+            android:textColor="@color/black"
+            android:textSize="@dimen/sp_24" />
+
+        <TextView
+            android:id="@+id/tv_translate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:background="@color/white"
+            android:text="Easy Library"
+            android:textColor="@color/white"
+            android:textSize="@dimen/sp_24" />
+    </RelativeLayout>
+
+
+</LinearLayout>

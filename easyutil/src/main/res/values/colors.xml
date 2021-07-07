@@ -20,4 +20,7 @@
 
     <color name="line">#EEE</color><!--分隔线-->
 
+    <color name="green_1">#43A047</color>
+    <color name="green_2">#2ead4d</color>
+
 </resources>

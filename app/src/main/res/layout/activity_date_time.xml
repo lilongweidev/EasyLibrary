@@ -1,0 +1,164 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.DateTimeActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
+            <TextView
+                android:id="@+id/tv_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="标准时间"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_full_datetime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="完整时间"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_year_month_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年月日"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_year_month_day_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年月日"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_year_month_day_delimiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年月日"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_hour_minute_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时分秒"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_hour_minute_second_cn"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时分秒"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_hour_minute_second_delimiter"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时分秒"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_year"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="年"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_month"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="月"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_day"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="日"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_hour"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tv_minute"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="分"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tv_second"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="秒"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+            <TextView
+                android:id="@+id/tv_millisecond"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="毫秒"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_timestamp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="时间戳"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_week"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="星期"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+
+            <TextView
+                android:id="@+id/tv_month_days"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="本月天数"
+                android:layout_marginBottom="@dimen/dp_16"
+                android:textColor="@color/black" />
+        </LinearLayout>
+    </ScrollView>
+
+</LinearLayout>
