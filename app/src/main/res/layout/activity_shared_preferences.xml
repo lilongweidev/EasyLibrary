@@ -1,0 +1,162 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.SharedPreferencesActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="@dimen/dp_16">
+
+        <!--Int-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+            <EditText
+                android:id="@+id/et_int"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入int类型"
+                android:inputType="number" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_int_set"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="保存" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_int_get"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="获取" />
+        </LinearLayout>
+
+        <!--String-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <EditText
+                android:id="@+id/et_string"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入String类型"
+                android:inputType="text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_string_set"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="保存" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_string_get"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="获取" />
+        </LinearLayout>
+
+        <!--Boolean-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <EditText
+                android:id="@+id/et_boolean"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入Boolean类型"
+                android:inputType="text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_boolean_set"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="保存" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_boolean_get"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="获取" />
+        </LinearLayout>
+
+        <!--Float-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <EditText
+                android:id="@+id/et_float"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入Float类型"
+                android:inputType="text" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_float_set"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="保存" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_float_get"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginLeft="@dimen/dp_6"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="获取" />
+        </LinearLayout>
+
+    </LinearLayout>
+</LinearLayout>

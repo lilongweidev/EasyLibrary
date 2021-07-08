@@ -6,7 +6,7 @@
 
 ### 一、添加依赖
 
-Step 1. 项目工程的build.gradle，添加jitpack库
+Step 1. 项目工程的build.gradle，添加jitpack库。
 
 ```groovy
 allprojects {
@@ -16,7 +16,7 @@ allprojects {
 }
 ```
   
-Step 2. 模块的build.gradle，添加EasyLibrary依赖库
+Step 2. 模块的build.gradle，添加EasyLibrary依赖库。
 
 ```groovy
 dependencies {
@@ -24,7 +24,7 @@ dependencies {
 }
 ```
 
-Step 3. 初始化EasyLibrary依赖库，建议在Application中的onCreate中进行
+Step 3. 初始化EasyLibrary依赖库，建议在Application中的onCreate中进行。
 
 ```java
     //Easy初始化

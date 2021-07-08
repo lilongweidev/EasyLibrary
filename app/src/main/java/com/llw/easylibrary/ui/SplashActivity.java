@@ -8,6 +8,10 @@ import android.os.Bundle;
 import com.llw.easylibrary.R;
 import com.llw.easyutil.EasyAnimation;
 
+/**
+ * 引导页
+ * @author llw
+ */
 public class SplashActivity extends AppCompatActivity {
 
 
@@ -16,7 +20,12 @@ public class SplashActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
 
-        EasyAnimation.moveViewWidth(findViewById(R.id.tv_translate), () -> startActivity(new Intent(this,MainActivity.class)));
+        EasyAnimation.moveViewWidth(findViewById(R.id.tv_translate), () -> jumpActivity());
+    }
+
+    private void jumpActivity() {
+        startActivity(new Intent(this,MainActivity.class));
+        finish();
     }
 
 }

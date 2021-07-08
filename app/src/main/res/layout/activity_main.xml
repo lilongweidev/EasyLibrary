@@ -25,7 +25,7 @@
     <LinearLayout
         android:layout_width="match_parent"
         android:layout_height="match_parent"
-        android:orientation="vertical">
+        android:orientation="horizontal">
 
         <com.google.android.material.button.MaterialButton
             android:id="@+id/btn_datetime_used"
@@ -43,6 +43,26 @@
             android:paddingTop="@dimen/dp_16"
             android:paddingEnd="@dimen/dp_0"
             android:text="DateTime"
+            android:textAllCaps="false"
+            android:textSize="@dimen/sp_14"
+            app:cornerRadius="@dimen/dp_12" />
+
+        <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_shared_used"
+            android:layout_width="@dimen/dp_100"
+            android:layout_height="@dimen/dp_100"
+            android:layout_marginStart="@dimen/dp_16"
+            android:layout_marginTop="@dimen/dp_16"
+            android:drawableTop="@drawable/ic_save_white"
+            android:gravity="center"
+            android:insetLeft="@dimen/dp_0"
+            android:insetTop="@dimen/dp_0"
+            android:insetRight="@dimen/dp_0"
+            android:insetBottom="@dimen/dp_0"
+            android:paddingStart="@dimen/dp_0"
+            android:paddingTop="@dimen/dp_16"
+            android:paddingEnd="@dimen/dp_0"
+            android:text="SharedPere"
             android:textAllCaps="false"
             android:textSize="@dimen/sp_14"
             app:cornerRadius="@dimen/dp_12" />

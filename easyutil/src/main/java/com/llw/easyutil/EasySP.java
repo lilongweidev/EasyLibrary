@@ -1,6 +1,8 @@
 package com.llw.easyutil;
 
 import android.content.Context;
+import android.content.ContextWrapper;
+import android.content.SharedPreferences;
 
 import java.util.Set;
 
@@ -12,10 +14,16 @@ public final class EasySP {
 
     private static final String NAME = "data_config";
 
-    private static Context mContext;
+    private static ContextWrapper mWrapper = null;
+    private static SharedPreferences mPreferences = null;
 
     public static void init(Context context) {
-        mContext = context;
+        if(mWrapper == null){
+            mWrapper = new ContextWrapper(context);
+        }
+        if(mPreferences == null){
+            mPreferences = mWrapper.getSharedPreferences(NAME, ContextWrapper.MODE_PRIVATE);
+        }
     }
 
     /**
@@ -24,7 +32,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putBoolean(String key, boolean value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putBoolean(key, value).apply();
+        mPreferences.edit().putBoolean(key, value).apply();
     }
 
     /**
@@ -34,7 +42,7 @@ public final class EasySP {
      * @return 结果
      */
     public static boolean getBoolean(String key, boolean defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getBoolean(key, defValue);
+        return mPreferences.getBoolean(key, defValue);
     }
 
     /**
@@ -43,7 +51,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putString(String key, String value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putString(key, value).apply();
+        mPreferences.edit().putString(key, value).apply();
     }
 
     /**
@@ -53,7 +61,7 @@ public final class EasySP {
      * @return 结果
      */
     public static String getString(String key, String defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getString(key, defValue);
+        return mPreferences.getString(key, defValue);
     }
 
     /**
@@ -62,7 +70,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putInt(String key, int value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putInt(key, value).apply();
+        mPreferences.edit().putInt(key, value).apply();
     }
 
     /**
@@ -72,7 +80,7 @@ public final class EasySP {
      * @return 结果
      */
     public static int getInt(String key, int defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getInt(key, defValue);
+        return mPreferences.getInt(key, defValue);
     }
 
     /**
@@ -81,7 +89,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putFloat(String key, float value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putFloat(key, value).apply();
+        mPreferences.edit().putFloat(key, value).apply();
     }
 
     /**
@@ -91,7 +99,7 @@ public final class EasySP {
      * @return 结果
      */
     public static float getFloat(String key, float defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getFloat(key, defValue);
+        return mPreferences.getFloat(key, defValue);
     }
 
     /**
@@ -100,7 +108,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putLong(String key, long value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putLong(key,value).apply();
+        mPreferences.edit().putLong(key,value).apply();
     }
 
     /**
@@ -110,7 +118,7 @@ public final class EasySP {
      * @return 结果
      */
     public static long getLong(String key, long defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getLong(key, defValue);
+        return mPreferences.getLong(key, defValue);
     }
 
     /**
@@ -119,7 +127,7 @@ public final class EasySP {
      * @param value 缓存值
      */
     public static void putStringSet(String key, Set<String> value) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().putStringSet(key,value).apply();
+        mPreferences.edit().putStringSet(key,value).apply();
     }
 
     /**
@@ -129,7 +137,7 @@ public final class EasySP {
      * @return 结果
      */
     public static Set<String> getStringSet(String key, Set<String> defValue) {
-        return mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).getStringSet(key, defValue);
+        return mPreferences.getStringSet(key, defValue);
     }
 
     /**
@@ -137,6 +145,6 @@ public final class EasySP {
      * @param key 键
      */
     public static void remove(String key) {
-        mContext.getSharedPreferences(NAME, Context.MODE_PRIVATE).edit().remove(key).apply();
+        mPreferences.edit().remove(key).apply();
     }
 }
