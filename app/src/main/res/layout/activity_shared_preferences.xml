@@ -22,7 +22,7 @@
 
             <EditText
                 android:id="@+id/et_int"
-                android:layout_width="@dimen/dp_0"
+                android:layout_width="0dp"
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
@@ -33,7 +33,9 @@
                 android:id="@+id/btn_int_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -43,7 +45,9 @@
                 android:id="@+id/btn_int_get"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -69,7 +73,9 @@
                 android:id="@+id/btn_string_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -79,7 +85,9 @@
                 android:id="@+id/btn_string_get"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -98,14 +106,16 @@
                 android:layout_height="wrap_content"
                 android:layout_weight="1"
                 android:gravity="center_vertical"
-                android:hint="请输入Boolean类型"
-                android:inputType="text" />
+                android:hint="请输入小于10的数"
+                android:inputType="number" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_boolean_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -115,7 +125,9 @@
                 android:id="@+id/btn_boolean_get"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -135,13 +147,15 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入Float类型"
-                android:inputType="text" />
+                android:inputType="numberDecimal" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_float_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
@@ -151,7 +165,49 @@
                 android:id="@+id/btn_float_get"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
-                android:layout_marginLeft="@dimen/dp_6"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="获取" />
+        </LinearLayout>
+
+        <!--Long-->
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="@dimen/dp_16">
+
+            <EditText
+                android:id="@+id/et_long"
+                android:layout_width="@dimen/dp_0"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                android:hint="请输入Long类型"
+                android:inputType="number" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_long_set"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
+                android:gravity="center"
+                android:insetTop="@dimen/dp_0"
+                android:insetBottom="@dimen/dp_0"
+                android:text="保存" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_long_get"
+                android:layout_width="@dimen/dp_60"
+                android:layout_height="@dimen/dp_40"
+                android:layout_marginStart="@dimen/dp_6"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"

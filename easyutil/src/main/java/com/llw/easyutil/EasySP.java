@@ -27,22 +27,22 @@ public final class EasySP {
     }
 
     /**
-     * putBoolean
+     * putInt
      * @param key 键
      * @param value 缓存值
      */
-    public static void putBoolean(String key, boolean value) {
-        mPreferences.edit().putBoolean(key, value).apply();
+    public static void putInt(String key, int value) {
+        mPreferences.edit().putInt(key, value).apply();
     }
 
     /**
-     * getBoolean
+     * getInt
      * @param key 键
      * @param defValue 默认值
      * @return 结果
      */
-    public static boolean getBoolean(String key, boolean defValue) {
-        return mPreferences.getBoolean(key, defValue);
+    public static int getInt(String key, int defValue) {
+        return mPreferences.getInt(key, defValue);
     }
 
     /**
@@ -65,22 +65,22 @@ public final class EasySP {
     }
 
     /**
-     * putInt
+     * putBoolean
      * @param key 键
      * @param value 缓存值
      */
-    public static void putInt(String key, int value) {
-        mPreferences.edit().putInt(key, value).apply();
+    public static void putBoolean(String key, boolean value) {
+        mPreferences.edit().putBoolean(key, value).apply();
     }
 
     /**
-     * getInt
+     * getBoolean
      * @param key 键
      * @param defValue 默认值
      * @return 结果
      */
-    public static int getInt(String key, int defValue) {
-        return mPreferences.getInt(key, defValue);
+    public static boolean getBoolean(String key, boolean defValue) {
+        return mPreferences.getBoolean(key, defValue);
     }
 
     /**
