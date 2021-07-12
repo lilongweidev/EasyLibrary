@@ -1,0 +1,351 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.RegexActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+            <!--手机号码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content">
+
+                <EditText
+                    android:id="@+id/et_phone"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入手机号码"
+                    android:inputType="phone"
+                    android:maxLength="11"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_phone_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--电话号码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_telephone"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入电话号码"
+                    android:maxLength="12"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_telephone_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--身份证号码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_id_card_18"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入18位身份证号"
+                    android:maxLength="18"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_id_card_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--QQ-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_qq"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入QQ"
+                    android:inputType="numberDecimal"
+                    android:maxLength="10"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_qq_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--邮箱-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_email"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入邮箱"
+                    android:inputType="textEmailAddress"
+                    android:maxLength="24"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_email_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--邮政编码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_postal_code"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入邮政编码"
+                    android:inputType="number"
+                    android:maxLength="24"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_postal_code_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--域名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_domain_name"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入域名"
+                    android:inputType="textUri"
+                    android:maxLength="24"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_domain_name_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--URL-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_url"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入Url"
+                    android:inputType="textUri"
+                    android:maxLength="24"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_url_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--姓名-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_name"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入姓名"
+                    android:inputType="textPassword"
+                    android:maxLength="4"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_name_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--账号-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_account"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入账号"
+                    android:inputType="textPassword"
+                    android:maxLength="16"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_account_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+            <!--密码-->
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:layout_marginTop="@dimen/dp_16">
+
+                <EditText
+                    android:id="@+id/et_pwd"
+                    android:layout_width="@dimen/dp_0"
+                    android:layout_height="wrap_content"
+                    android:layout_weight="1"
+                    android:gravity="center_vertical"
+                    android:hint="请输入密码"
+                    android:inputType="textPassword"
+                    android:maxLength="18"
+                    android:textColor="@color/black"
+                    android:textSize="@dimen/sp_14" />
+
+                <com.google.android.material.button.MaterialButton
+                    android:id="@+id/btn_pwd_check"
+                    android:layout_width="@dimen/dp_60"
+                    android:layout_height="@dimen/dp_40"
+                    android:layout_marginStart="@dimen/dp_6"
+                    android:gravity="center"
+                    android:insetTop="@dimen/dp_0"
+                    android:insetBottom="@dimen/dp_0"
+                    android:paddingStart="@dimen/dp_0"
+                    android:paddingEnd="@dimen/dp_0"
+                    android:text="检查" />
+            </LinearLayout>
+
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>

@@ -4,6 +4,11 @@ import android.app.Application;
 
 import com.llw.easyutil.Easy;
 
+/**
+ * EasyApplication
+ * @author llw
+ * @date 2021/07/01
+ */
 public class EasyApplication extends Application {
 
     @Override

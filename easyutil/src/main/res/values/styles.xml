@@ -10,4 +10,47 @@
         <item name="android:windowContentOverlay">@null</item>
     </style>
 
+    <declare-styleable name="EasyView">
+        <attr name="android:radius" format="dimension" />
+        <attr name="android:color" format="color" />
+        <attr name="android:text" format="string"/>
+        <attr name="android:textColor" format="color"/>
+        <attr name="android:textSize" format="dimension"/>
+    </declare-styleable>
+
+    <declare-styleable name="Simple">
+        <!--1.reference：参考某一资源ID-->
+        <attr name="background" format="reference" />
+        <!--2. color：颜色值-->
+        <attr name="textColor" format="color" />
+        <!--3.boolean：布尔值-->
+        <attr name="focusable" format="boolean" />
+        <!--4.dimension：尺寸值-->
+        <attr name="layout_width" format="dimension" />
+        <!--5. float：浮点值-->
+        <attr name="fromAlpha" format="float" />
+        <!--6.integer：整型值-->
+        <attr name="lines" format="integer" />
+        <!--7.string：字符串-->
+        <attr name="text" format="string" />
+        <!--8.fraction：百分数-->
+        <attr name="pivotX" format="fraction" />
+        <!--9.enum：枚举值。属性值只能选择枚举值中的一个-->
+        <attr name="orientation">
+            <enum name="horizontal" value="0" />
+            <enum name="vertical" value="1" />
+        </attr>
+        <!--10.flag：位或运算。属性值可以选择其中多个值-->
+        <attr name="gravity">
+            <flag name="top" value="0x01" />
+            <flag name="bottom" value="0x02" />
+            <flag name="left" value="0x04" />
+            <flag name="right" value="0x08" />
+            <flag name="center_vertical" value="0x16" />
+
+        </attr>
+        <!--11.混合类型：属性定义时可以指定多种类型值-->
+        <attr name="background_2" format="reference|color" />
+    </declare-styleable>
+
 </resources>

@@ -16,12 +16,11 @@ import java.util.Locale;
 /**
  * EasyDate Used
  * @author llw
+ * @date 2021/07/01
  */
-public class DateTimeActivity extends AppCompatActivity {
+public class DateTimeActivity extends BaseActivity {
 
-    private MaterialToolbar toolbar;
-    private ImageView ivFunction;
-    private TextView tvTitle, tvDatetime, tvFullDatetime, tvYearMonthDay, tvYearMonthDayCn,
+    private TextView tvDatetime, tvFullDatetime, tvYearMonthDay, tvYearMonthDayCn,
             tvYearMonthDayCnDelimiter, tvHourMinuteSecond, tvHourMinuteSecondCn,
             tvHourMinuteSecondDelimiter, tvYear, tvMonth, tvDay, tvHour, tvMinute, tvSecond,
             tvMillisecond,tvTimestamp,tvWeek,tvMonthDays;
@@ -38,9 +37,9 @@ public class DateTimeActivity extends AppCompatActivity {
      * 初始化
      */
     private void initView() {
-        toolbar = findViewById(R.id.toolbar);
-        tvTitle = findViewById(R.id.tv_title);
-        ivFunction = findViewById(R.id.iv_function);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
+        TextView tvTitle = findViewById(R.id.tv_title);
+        ImageView ivFunction = findViewById(R.id.iv_function);
         ivFunction.setImageResource(R.drawable.ic_refresh_white);
         tvDatetime = findViewById(R.id.tv_datetime);
         tvFullDatetime = findViewById(R.id.tv_full_datetime);

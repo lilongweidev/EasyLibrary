@@ -1,8 +1,5 @@
 package com.llw.easylibrary.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
-import android.content.Intent;
 import android.os.Bundle;
 
 import com.llw.easylibrary.R;
@@ -11,21 +8,16 @@ import com.llw.easyutil.EasyAnimation;
 /**
  * 引导页
  * @author llw
+ * @date 2021/07/06
  */
-public class SplashActivity extends AppCompatActivity {
+public class SplashActivity extends BaseActivity {
 
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_splash);
-
-        EasyAnimation.moveViewWidth(findViewById(R.id.tv_translate), () -> jumpActivity());
+        setLightStatusBar(this,true);
+        EasyAnimation.moveViewWidth(findViewById(R.id.tv_translate), () -> jumpActivityFinish(MainActivity.class));
     }
-
-    private void jumpActivity() {
-        startActivity(new Intent(this,MainActivity.class));
-        finish();
-    }
-
 }

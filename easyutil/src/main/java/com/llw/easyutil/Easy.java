@@ -6,6 +6,7 @@ import android.content.SharedPreferences;
 /**
  * Easy
  * @author llw
+ * @date 2021/07/06
  */
 public class Easy {
 

@@ -19,11 +19,10 @@ import static com.llw.easyutil.EasyToast.show;
  * EasySP Used
  *
  * @author llw
+ * @date 2021/07/09
  */
-public class SharedPreferencesActivity extends AppCompatActivity {
+public class SharedPreferencesActivity extends BaseActivity {
 
-    private MaterialToolbar toolbar;
-    private TextView tvTitle;
     private EditText etInt, etString, etBoolean, etFloat, etLong;
 
     public static final String INT_DATA = "intData";
@@ -37,9 +36,9 @@ public class SharedPreferencesActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences);
 
-        toolbar = findViewById(R.id.toolbar);
+        MaterialToolbar toolbar = findViewById(R.id.toolbar);
         toolbar.setNavigationOnClickListener(v -> finish());
-        tvTitle = findViewById(R.id.tv_title);
+        TextView tvTitle = findViewById(R.id.tv_title);
         tvTitle.setText("本地缓存使用");
         etInt = findViewById(R.id.et_int);
         etString = findViewById(R.id.et_string);

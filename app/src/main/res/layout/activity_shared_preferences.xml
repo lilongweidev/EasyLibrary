@@ -27,18 +27,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入int类型"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_int_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="保存" />
 
             <com.google.android.material.button.MaterialButton
@@ -46,11 +48,11 @@
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="获取" />
         </LinearLayout>
 
@@ -67,18 +69,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入String类型"
-                android:inputType="text" />
+                android:inputType="text"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_string_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="保存" />
 
             <com.google.android.material.button.MaterialButton
@@ -86,11 +90,11 @@
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="获取" />
         </LinearLayout>
 
@@ -107,18 +111,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入小于10的数"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_boolean_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="保存" />
 
             <com.google.android.material.button.MaterialButton
@@ -126,11 +132,11 @@
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="获取" />
         </LinearLayout>
 
@@ -147,18 +153,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入Float类型"
-                android:inputType="numberDecimal" />
+                android:inputType="numberDecimal"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_float_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="保存" />
 
             <com.google.android.material.button.MaterialButton
@@ -166,11 +174,11 @@
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="获取" />
         </LinearLayout>
 
@@ -187,18 +195,20 @@
                 android:layout_weight="1"
                 android:gravity="center_vertical"
                 android:hint="请输入Long类型"
-                android:inputType="number" />
+                android:inputType="number"
+                android:textColor="@color/black"
+                android:textSize="@dimen/sp_14" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_long_set"
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="保存" />
 
             <com.google.android.material.button.MaterialButton
@@ -206,11 +216,11 @@
                 android:layout_width="@dimen/dp_60"
                 android:layout_height="@dimen/dp_40"
                 android:layout_marginStart="@dimen/dp_6"
-                android:paddingStart="@dimen/dp_0"
-                android:paddingEnd="@dimen/dp_0"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
+                android:paddingStart="@dimen/dp_0"
+                android:paddingEnd="@dimen/dp_0"
                 android:text="获取" />
         </LinearLayout>
 

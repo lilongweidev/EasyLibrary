@@ -10,6 +10,7 @@ import android.view.animation.TranslateAnimation;
  * EasyAnimation
  *
  * @author llw
+ * @date 2021/07/02
  */
 public final class EasyAnimation {
 

@@ -13,11 +13,14 @@ import com.llw.easylibrary.R;
 
 /**
  * Main
+ *
  * @author llw
+ * @date 2021/06/25
  */
-public class MainActivity extends AppCompatActivity {
+public class MainActivity extends BaseActivity {
 
-    private long timeMillis;//时间
+    //时间
+    private long timeMillis;
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
@@ -26,16 +29,9 @@ public class MainActivity extends AppCompatActivity {
 
         findViewById(R.id.btn_datetime_used).setOnClickListener(v -> jumpActivity(DateTimeActivity.class));
         findViewById(R.id.btn_shared_used).setOnClickListener(v -> jumpActivity(SharedPreferencesActivity.class));
+        findViewById(R.id.btn_regex_used).setOnClickListener(v -> jumpActivity(RegexActivity.class));
+        findViewById(R.id.btn_toast_used).setOnClickListener(v -> jumpActivity(ToastActivity.class));
     }
-
-    /**
-     * 跳转Activity
-     * @param clazz 目标Activity
-     */
-    private void jumpActivity(Class<?> clazz) {
-        startActivity(new Intent(this, clazz));
-    }
-
 
     /**
      * 增加一个退出应用的提示
@@ -57,4 +53,5 @@ public class MainActivity extends AppCompatActivity {
         }
         return super.onKeyDown(keyCode, event);
     }
+
 }

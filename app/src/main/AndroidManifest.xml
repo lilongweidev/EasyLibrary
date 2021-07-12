@@ -5,11 +5,12 @@
     <application
         android:name=".EasyApplication"
         android:allowBackup="true"
-        android:icon="@drawable/ic_easy_logo"
+        android:icon="@mipmap/ic_easy_logo"
         android:label="@string/app_name"
-        android:roundIcon="@drawable/ic_easy_logo"
+        android:roundIcon="@mipmap/ic_easy_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyLibrary">
+        <activity android:name=".ui.ToastActivity"></activity>
         <activity
             android:name=".ui.SplashActivity"
             android:theme="@style/SplashTheme">
@@ -21,7 +22,8 @@
         </activity>
         <activity android:name=".ui.MainActivity" />
         <activity android:name=".ui.DateTimeActivity" />
-        <activity android:name=".ui.SharedPreferencesActivity"/>
+        <activity android:name=".ui.SharedPreferencesActivity" />
+        <activity android:name=".ui.RegexActivity" />
     </application>
 
 </manifest>
