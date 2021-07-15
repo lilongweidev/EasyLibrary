@@ -1,16 +1,9 @@
 package com.llw.easylibrary.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.ImageView;
-import android.widget.TextView;
 
-import com.google.android.material.appbar.MaterialToolbar;
-import com.google.android.material.button.MaterialButton;
 import com.llw.easylibrary.R;
-import com.llw.easyutil.Easy;
 import com.llw.easyutil.EasySP;
 
 import static com.llw.easyutil.EasyToast.show;
@@ -36,10 +29,8 @@ public class SharedPreferencesActivity extends BaseActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_shared_preferences);
 
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        toolbar.setNavigationOnClickListener(v -> finish());
-        TextView tvTitle = findViewById(R.id.tv_title);
-        tvTitle.setText("本地缓存使用");
+        back();
+        setPageTitle(1);
         etInt = findViewById(R.id.et_int);
         etString = findViewById(R.id.et_string);
         etBoolean = findViewById(R.id.et_boolean);

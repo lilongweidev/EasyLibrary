@@ -1,3 +1,8 @@
 <resources>
     <string name="app_name">EasyLibrary</string>
+    <string name="date_time_tip">DateTime</string>
+    <string name="shared_pere_tip">SharedPere</string>
+    <string name="regex_used_tip">RegexUsed</string>
+    <string name="toast_used_tip">ToastUsed</string>
+    <string name="app_info_tip">AppInfo</string>
 </resources>

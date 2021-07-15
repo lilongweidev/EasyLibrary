@@ -1,13 +1,9 @@
 package com.llw.easylibrary.ui;
 
-import androidx.appcompat.app.AppCompatActivity;
-
 import android.os.Bundle;
-import android.view.View;
 import android.widget.ImageView;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.MaterialToolbar;
 import com.llw.easylibrary.R;
 import com.llw.easyutil.EasyDate;
 
@@ -37,8 +33,8 @@ public class DateTimeActivity extends BaseActivity {
      * 初始化
      */
     private void initView() {
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        TextView tvTitle = findViewById(R.id.tv_title);
+        back();
+        setPageTitle(0);
         ImageView ivFunction = findViewById(R.id.iv_function);
         ivFunction.setImageResource(R.drawable.ic_refresh_white);
         tvDatetime = findViewById(R.id.tv_datetime);
@@ -59,9 +55,7 @@ public class DateTimeActivity extends BaseActivity {
         tvTimestamp = findViewById(R.id.tv_timestamp);
         tvWeek = findViewById(R.id.tv_week);
         tvMonthDays = findViewById(R.id.tv_month_days);
-        toolbar.setNavigationOnClickListener(v -> finish());
         ivFunction.setOnClickListener(v -> refresh());
-        tvTitle.setText("日期时间使用");
         refresh();
     }
 

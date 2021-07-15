@@ -32,5 +32,8 @@ public class Easy {
         EasySP.init(mContext);
         //初始化 Size
         EasySize.init(mContext);
+        //初始化 AppInfo
+        EasyAppInfo.init(mContext);
+
     }
 }

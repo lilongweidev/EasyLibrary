@@ -9,7 +9,6 @@ import android.widget.RadioGroup;
 import android.widget.SeekBar;
 import android.widget.TextView;
 
-import com.google.android.material.appbar.MaterialToolbar;
 import com.llw.easylibrary.R;
 
 import java.util.Locale;
@@ -41,11 +40,9 @@ public class ToastActivity extends BaseActivity {
      * 初始化
      */
     private void initView() {
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        TextView tvTitle = findViewById(R.id.tv_title);
+        back();
+        setPageTitle(3);
         TextView tvRadius = findViewById(R.id.tv_radius);
-        back(toolbar);
-        tvTitle.setText("Toast使用");
         AppCompatSeekBar sbRadius = findViewById(R.id.sb_radius);
         sbRadius.setOnSeekBarChangeListener(new SeekBar.OnSeekBarChangeListener() {
             @RequiresApi(api = Build.VERSION_CODES.O)

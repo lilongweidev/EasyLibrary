@@ -56,7 +56,7 @@ public final class EasyRegex {
     /**
      * QQ
      */
-    public static final String REGEX_QQ = "[1-9][0-9]{4,10}";
+    public static final String REGEX_QQ = "[1-9][0-9]{4,9}";
 
     /**
      * 中国邮政编码

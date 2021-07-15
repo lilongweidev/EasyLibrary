@@ -2,9 +2,7 @@ package com.llw.easylibrary.ui;
 
 import android.os.Bundle;
 import android.widget.EditText;
-import android.widget.TextView;
 
-import com.google.android.material.appbar.MaterialToolbar;
 import com.llw.easylibrary.R;
 import com.llw.easyutil.EasyRegex;
 
@@ -32,8 +30,8 @@ public class RegexActivity extends BaseActivity {
      * 页面初始化
      */
     private void initView() {
-        MaterialToolbar toolbar = findViewById(R.id.toolbar);
-        TextView tvTitle = findViewById(R.id.tv_title);
+        back();
+        setPageTitle(2);
         etPhone = findViewById(R.id.et_phone);
         etTelephone = findViewById(R.id.et_telephone);
         etIdCard18 = findViewById(R.id.et_id_card_18);
@@ -45,8 +43,6 @@ public class RegexActivity extends BaseActivity {
         etName = findViewById(R.id.et_name);
         etAccount = findViewById(R.id.et_account);
         etPwd = findViewById(R.id.et_pwd);
-        back(toolbar);
-        tvTitle.setText("正则表达式使用");
         //手机号码检查
         findViewById(R.id.btn_phone_check).setOnClickListener(v -> checkContent(etPhone, 0));
         //电话号码检查

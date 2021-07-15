@@ -10,76 +10,82 @@
     <include layout="@layout/title_layout" />
 
     <ScrollView
-        android:overScrollMode="never"
         android:layout_width="match_parent"
-        android:layout_height="match_parent">
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
         <LinearLayout
-            android:padding="@dimen/dp_16"
-            android:orientation="vertical"
             android:layout_width="match_parent"
-            android:layout_height="wrap_content">
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            android:padding="@dimen/dp_16">
+
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_default_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="默认 Toast" />
+                android:text="默认 Toast"
+                android:textAllCaps="false" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_default_long_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="默认 Long Toast" />
+                android:text="默认 Long Toast"
+                android:textAllCaps="false" />
 
             <LinearLayout
-                android:paddingStart="@dimen/dp_6"
-                android:paddingEnd="@dimen/dp_6"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_6">
 
                 <TextView
-                    android:text="位置："
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="位置："
+                    android:textColor="@color/black" />
+
                 <RadioGroup
                     android:id="@+id/rg_gravity"
-                    android:orientation="horizontal"
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
+                    android:layout_height="wrap_content"
+                    android:orientation="horizontal">
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/rb_top"
-                        android:text="顶部"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:text="顶部" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/rb_center"
-                        android:text="中间"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:text="中间" />
+
                     <com.google.android.material.radiobutton.MaterialRadioButton
                         android:id="@+id/rb_bottom"
-                        android:text="底部"
                         android:layout_width="0dp"
+                        android:layout_height="wrap_content"
                         android:layout_weight="1"
-                        android:layout_height="wrap_content"/>
+                        android:text="底部" />
                 </RadioGroup>
             </LinearLayout>
 
@@ -87,214 +93,241 @@
                 android:id="@+id/btn_gravity_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="显示位置 Easy Toast" />
+                android:text="显示位置 Easy Toast"
+                android:textAllCaps="false" />
 
             <LinearLayout
-                android:paddingStart="@dimen/dp_6"
-                android:paddingEnd="@dimen/dp_6"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_6">
 
                 <TextView
-                    android:text="圆角："
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="圆角："
+                    android:textColor="@color/black" />
+
                 <androidx.appcompat.widget.AppCompatSeekBar
                     android:id="@+id/sb_radius"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
                     android:layout_marginTop="@dimen/dp_10"
                     android:layout_marginBottom="@dimen/dp_10"
-                    android:layout_width="0dp"
                     android:layout_weight="1"
-                    android:max="100"
-                    android:layout_height="wrap_content"/>
+                    android:max="100" />
+
                 <TextView
                     android:id="@+id/tv_radius"
-                    android:textColor="@color/black"
-                    android:text="0"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
+                    android:layout_height="wrap_content"
+                    android:text="0"
+                    android:textColor="@color/black" />
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_radius_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="自定义圆角 Easy Toast" />
+                android:text="自定义圆角 Easy Toast"
+                android:textAllCaps="false" />
 
             <LinearLayout
-                android:paddingStart="@dimen/dp_6"
-                android:paddingEnd="@dimen/dp_6"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_6">
 
                 <TextView
-                    android:text="背景："
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <RadioGroup
-                    android:id="@+id/rg_bg"
-                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="背景："
+                    android:textColor="@color/black" />
+
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_red_bg"
-                        android:text="红色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_green_bg"
-                        android:text="绿色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_blue_bg"
-                        android:text="蓝色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_orange_bg"
-                        android:text="橙色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_purple_bg"
-                        android:text="紫色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RadioGroup>
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <RadioGroup
+                        android:id="@+id/rg_bg"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_red_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="红色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_green_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="绿色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_blue_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="蓝色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_orange_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="橙色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_purple_bg"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="紫色" />
+                    </RadioGroup>
+                </HorizontalScrollView>
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_bg_color_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="自定义背景颜色 Easy Toast" />
+                android:text="自定义背景颜色 Easy Toast"
+                android:textAllCaps="false" />
 
             <LinearLayout
-                android:paddingStart="@dimen/dp_6"
-                android:paddingEnd="@dimen/dp_6"
-                android:orientation="horizontal"
-                android:gravity="center_vertical"
                 android:layout_width="match_parent"
-                android:layout_height="wrap_content">
+                android:layout_height="wrap_content"
+                android:gravity="center_vertical"
+                android:orientation="horizontal"
+                android:paddingStart="@dimen/dp_6"
+                android:paddingEnd="@dimen/dp_6">
 
                 <TextView
-                    android:text="文字："
-                    android:textColor="@color/black"
                     android:layout_width="wrap_content"
-                    android:layout_height="wrap_content"/>
-                <RadioGroup
-                    android:id="@+id/rg_tx"
-                    android:orientation="horizontal"
+                    android:layout_height="wrap_content"
+                    android:text="文字："
+                    android:textColor="@color/black" />
+
+                <HorizontalScrollView
                     android:layout_width="match_parent"
-                    android:layout_height="wrap_content">
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_red_tx"
-                        android:text="红色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_green_tx"
-                        android:text="绿色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_blue_tx"
-                        android:text="蓝色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_orange_tx"
-                        android:text="橙色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                    <com.google.android.material.radiobutton.MaterialRadioButton
-                        android:id="@+id/rb_purple_tx"
-                        android:text="紫色"
-                        android:layout_width="wrap_content"
-                        android:layout_height="wrap_content"/>
-                </RadioGroup>
+                    android:layout_height="wrap_content"
+                    android:overScrollMode="never"
+                    android:scrollbars="none">
+
+                    <RadioGroup
+                        android:id="@+id/rg_tx"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content"
+                        android:orientation="horizontal">
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_red_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="红色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_green_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="绿色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_blue_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="蓝色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_orange_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="橙色" />
+
+                        <com.google.android.material.radiobutton.MaterialRadioButton
+                            android:id="@+id/rb_purple_tx"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:text="紫色" />
+                    </RadioGroup>
+                </HorizontalScrollView>
             </LinearLayout>
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_tx_color_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="自定义文字颜色 Easy Toast" />
+                android:text="自定义文字颜色 Easy Toast"
+                android:textAllCaps="false" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_color_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="文字、背景颜色改变 Easy Toast" />
+                android:text="文字、背景颜色改变 Easy Toast"
+                android:textAllCaps="false" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_base_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="圆角、文字、背景改变 Easy Toast" />
+                android:text="圆角、文字、背景改变 Easy Toast"
+                android:textAllCaps="false" />
 
             <com.google.android.material.button.MaterialButton
                 android:id="@+id/btn_plus_toast"
                 android:layout_width="match_parent"
                 android:layout_height="@dimen/dp_40"
-                android:textAllCaps="false"
                 android:layout_margin="@dimen/dp_6"
                 android:gravity="center"
                 android:insetTop="@dimen/dp_0"
                 android:insetBottom="@dimen/dp_0"
                 android:paddingStart="@dimen/dp_0"
                 android:paddingEnd="@dimen/dp_0"
-                android:text="位置、圆角、文字、背景改变 Easy Toast" />
-
+                android:text="位置、圆角、文字、背景改变 Easy Toast"
+                android:textAllCaps="false" />
 
 
         </LinearLayout>
