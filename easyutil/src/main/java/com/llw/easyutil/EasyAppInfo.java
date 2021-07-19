@@ -4,6 +4,8 @@ import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
 import android.content.pm.PackageManager;
+import android.graphics.drawable.Drawable;
+import android.util.Log;
 
 import java.text.SimpleDateFormat;
 import java.util.ArrayList;
@@ -23,6 +25,41 @@ public final class EasyAppInfo {
     private static Context mContext;
     private static PackageManager mPackageManager;
     private static PackageInfo mPackageInfo;
+    private static List<AppInfo> appInfoList;
+
+    public static List<AppInfo> getAppInfoList() {
+        List<PackageInfo> packageInfoList = mPackageManager.getInstalledPackages(0);
+        appInfoList = new ArrayList<>();
+        String appName;
+        String packageName;
+        Drawable appIcon;
+        for (PackageInfo packageInfo : packageInfoList) {
+            appName = packageInfo.applicationInfo.loadLabel(mPackageManager).toString();
+            packageName = packageInfo.packageName;
+            appIcon = packageInfo.applicationInfo.loadIcon(mPackageManager);
+            appInfoList.add(new AppInfo(appName,packageName,appIcon));
+        }
+        return appInfoList;
+    }
+
+
+    public static List<AppInfo> getAppInfoList(List<PackageInfo> packageInfoList) {
+        appInfoList = new ArrayList<>();
+        String appName;
+        String packageName;
+        Drawable appIcon;
+        for (PackageInfo packageInfo : packageInfoList) {
+            appName = packageInfo.applicationInfo.loadLabel(mPackageManager).toString();
+            packageName = packageInfo.packageName;
+            appIcon = packageInfo.applicationInfo.loadIcon(mPackageManager);
+            appInfoList.add(new AppInfo(appName,packageName,appIcon));
+        }
+        return appInfoList;
+    }
+
+    public static void setAppInfoList(List<AppInfo> appInfoList) {
+        EasyAppInfo.appInfoList = appInfoList;
+    }
 
     public static void init(Context context) {
         mContext = context;
@@ -126,5 +163,43 @@ public final class EasyAppInfo {
             return false;
         }
     }
+
+    public static class AppInfo {
+        private String appName;
+        private String packageName;
+        private Drawable appIcon;
+
+        public String getAppName() {
+            return appName;
+        }
+
+        public void setAppName(String appName) {
+            this.appName = appName;
+        }
+
+        public String getPackageName() {
+            return packageName;
+        }
+
+        public void setPackageName(String packageName) {
+            this.packageName = packageName;
+        }
+
+
+        public Drawable getAppIcon() {
+            return appIcon;
+        }
+
+        public void setAppIcon(Drawable appIcon) {
+            this.appIcon = appIcon;
+        }
+
+        public AppInfo(String appName, String packageName, Drawable appIcon) {
+            this.appName = appName;
+            this.packageName = packageName;
+            this.appIcon = appIcon;
+        }
+    }
+
 
 }

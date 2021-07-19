@@ -3,6 +3,7 @@ package com.llw.easylibrary;
 import android.app.Application;
 
 import com.llw.easyutil.Easy;
+import com.llw.easyutil.EasySize;
 
 /**
  * EasyApplication
