@@ -10,7 +10,8 @@
         android:roundIcon="@mipmap/ic_easy_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyLibrary">
-        <activity android:name=".ui.AppInfoActivity"></activity>
+        <activity android:name=".ui.LogActivity"></activity>
+        <activity android:name=".ui.AppInfoActivity" />
         <activity android:name=".ui.ToastActivity" />
         <activity
             android:name=".ui.SplashActivity"

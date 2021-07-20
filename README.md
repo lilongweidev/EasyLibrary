@@ -20,7 +20,7 @@ Step 2. 模块的build.gradle，添加EasyLibrary依赖库。
 
 ```groovy
 dependencies {
-	implementation 'com.github.lilongweidev:EasyLibrary:1.0.3'
+	implementation 'com.github.lilongweidev:EasyLibrary:1.0.4'
 }
 ```
 
@@ -51,7 +51,8 @@ Step 3. 初始化EasyLibrary依赖库，建议在Application中的onCreate中进
  EasySP     | 本地缓存使用  简化使用
  EasyToast  | Toast使用 自定义Toast，可以修改圆角、背景、文字颜色
  EasyRegex  | 正则表达式验证工具，手机号、身份证号、QQ、邮箱、密码、账号的验证，用于注册居多
- EasyAppInfo  | App信息工具，读取包名、版本号、版本名、安装后第一次启动判断、每天第一次启动判断  
+ EasyAppInfo  | App信息工具，读取包名、版本号、版本名、安装后第一次启动判断、每天第一次启动判断、读取手机上App应用列表
+ EasyLog    | 日志打印工具，定位到类名、方法名、打印日志的代码行数，可以自由控制是否打印日志。
      
 
 

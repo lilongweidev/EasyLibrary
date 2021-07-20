@@ -69,11 +69,11 @@
             android:text="@string/app_info_tip" />
 
         <com.google.android.material.button.MaterialButton
+            android:id="@+id/btn_logcat"
             style="@style/main_btn_style"
-            android:layout_width="0dp"
-            android:drawableTop="@drawable/ic_regex_white"
-            android:text="RegexUsed"
-            android:visibility="invisible" />
+            android:drawableTop="@drawable/ic_log_white"
+            android:text="Logcat" />
+
     </LinearLayout>
 
 </LinearLayout>

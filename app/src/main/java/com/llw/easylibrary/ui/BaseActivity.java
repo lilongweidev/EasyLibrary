@@ -69,6 +69,9 @@ public class BaseActivity extends AppCompatActivity {
             case 4:
                 tvTitle.setText("App信息");
                 break;
+            case 5:
+                tvTitle.setText("日志打印");
+                break;
         }
     }
 

@@ -32,6 +32,7 @@ public class MainActivity extends BaseActivity {
         findViewById(R.id.btn_regex_used).setOnClickListener(v -> jumpActivity(RegexActivity.class));
         findViewById(R.id.btn_toast_used).setOnClickListener(v -> jumpActivity(ToastActivity.class));
         findViewById(R.id.btn_app_info).setOnClickListener(v -> jumpActivity(AppInfoActivity.class));
+        findViewById(R.id.btn_logcat).setOnClickListener(v -> jumpActivity(LogActivity.class));
     }
 
     /**

@@ -1,5 +1,6 @@
 package com.llw.easyutil;
 
+import android.annotation.SuppressLint;
 import android.content.Context;
 import android.content.pm.ApplicationInfo;
 import android.content.pm.PackageInfo;
@@ -27,39 +28,6 @@ public final class EasyAppInfo {
     private static PackageInfo mPackageInfo;
     private static List<AppInfo> appInfoList;
 
-    public static List<AppInfo> getAppInfoList() {
-        List<PackageInfo> packageInfoList = mPackageManager.getInstalledPackages(0);
-        appInfoList = new ArrayList<>();
-        String appName;
-        String packageName;
-        Drawable appIcon;
-        for (PackageInfo packageInfo : packageInfoList) {
-            appName = packageInfo.applicationInfo.loadLabel(mPackageManager).toString();
-            packageName = packageInfo.packageName;
-            appIcon = packageInfo.applicationInfo.loadIcon(mPackageManager);
-            appInfoList.add(new AppInfo(appName,packageName,appIcon));
-        }
-        return appInfoList;
-    }
-
-
-    public static List<AppInfo> getAppInfoList(List<PackageInfo> packageInfoList) {
-        appInfoList = new ArrayList<>();
-        String appName;
-        String packageName;
-        Drawable appIcon;
-        for (PackageInfo packageInfo : packageInfoList) {
-            appName = packageInfo.applicationInfo.loadLabel(mPackageManager).toString();
-            packageName = packageInfo.packageName;
-            appIcon = packageInfo.applicationInfo.loadIcon(mPackageManager);
-            appInfoList.add(new AppInfo(appName,packageName,appIcon));
-        }
-        return appInfoList;
-    }
-
-    public static void setAppInfoList(List<AppInfo> appInfoList) {
-        EasyAppInfo.appInfoList = appInfoList;
-    }
 
     public static void init(Context context) {
         mContext = context;
@@ -164,6 +132,47 @@ public final class EasyAppInfo {
         }
     }
 
+    /**
+     * 获取手机上所有App信息
+     * @return App列表数据
+     */
+    public static List<AppInfo> getAppInfoList() {
+        List<PackageInfo> packageInfoList = mPackageManager.getInstalledPackages(0);
+        return getAppList(packageInfoList);
+    }
+
+    /**
+     * 获取手机上所有App信息
+     * @param packageInfoList 安装包列表
+     * @return App列表数据
+     */
+    public static List<AppInfo> getAppInfoList(List<PackageInfo> packageInfoList) {
+        return getAppList(packageInfoList);
+    }
+
+    /**
+     * App列表数据组装
+     * @param packageInfoList 安装包列表
+     * @return App列表数据
+     */
+    private static List<AppInfo> getAppList(List<PackageInfo> packageInfoList) {
+        appInfoList = new ArrayList<>();
+        for (PackageInfo packageInfo : packageInfoList) {
+            String appName = packageInfo.applicationInfo.loadLabel(mPackageManager).toString();
+            String packageName = packageInfo.packageName;
+            Drawable appIcon = packageInfo.applicationInfo.loadIcon(mPackageManager);
+            appInfoList.add(new AppInfo(appName, packageName, appIcon));
+        }
+        return appInfoList;
+    }
+
+    public static void setAppInfoList(List<AppInfo> appInfoList) {
+        EasyAppInfo.appInfoList = appInfoList;
+    }
+
+    /**
+     * AppInfo 包含（应用名称、包名、应用图标）
+     */
     public static class AppInfo {
         private String appName;
         private String packageName;
@@ -185,7 +194,6 @@ public final class EasyAppInfo {
             this.packageName = packageName;
         }
 
-
         public Drawable getAppIcon() {
             return appIcon;
         }
@@ -200,6 +208,4 @@ public final class EasyAppInfo {
             this.appIcon = appIcon;
         }
     }
-
-
 }
