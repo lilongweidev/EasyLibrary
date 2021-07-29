@@ -9,6 +9,8 @@
     <!--适配Android10、11 管理外部存储-->
     <uses-permission android:name="android.permission.MANAGE_EXTERNAL_STORAGE"
         tools:ignore="ScopedStorage" />
+    <!--相机-->
+    <uses-permission android:name="android.permission.CAMERA"/>
     <!--读取外部存储-->
     <uses-permission android:name="android.permission.READ_EXTERNAL_STORAGE"/>
     <!--写入外部存储-->

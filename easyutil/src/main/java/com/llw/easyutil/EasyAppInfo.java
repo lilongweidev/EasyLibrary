@@ -23,9 +23,18 @@ public final class EasyAppInfo {
     public static final String APP_FIRST_START = "appFirstStart";
     public static final String TODAY_START_UP_APP_TIME = "todayStartUpAppTime";
 
+    public static Context getContext() {
+        return mContext;
+    }
+
     private static Context mContext;
     private static PackageManager mPackageManager;
     private static PackageInfo mPackageInfo;
+
+    public static PackageManager getPackageManager() {
+        return mPackageManager;
+    }
+
     private static List<AppInfo> appInfoList;
 
 
@@ -34,6 +43,8 @@ public final class EasyAppInfo {
         try {
             mPackageManager = mContext.getPackageManager();
             mPackageInfo = mContext.getPackageManager().getPackageInfo(mContext.getPackageName(), 0);
+
+            EasyPermissionCheck.init();
         } catch (PackageManager.NameNotFoundException e) {
             e.printStackTrace();
         }

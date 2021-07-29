@@ -3,6 +3,8 @@ package com.llw.easyutil;
 import android.view.View;
 import android.view.animation.AlphaAnimation;
 import android.view.animation.Animation;
+import android.view.animation.AnimationUtils;
+import android.view.animation.ScaleAnimation;
 import android.view.animation.TranslateAnimation;
 
 
@@ -14,12 +16,40 @@ import android.view.animation.TranslateAnimation;
  */
 public final class EasyAnimation {
 
+
+    /**
+     * 开始自定义动画
+     *
+     * @param view   需要设置动画的View
+     * @param animId 动画资源文件id（自行配置）
+     */
+    public static void startCustomAnim(View view, int animId) {
+        Animation animation = AnimationUtils.loadAnimation(EasyAppInfo.getContext(), animId);
+        view.startAnimation(animation);
+    }
+
+    /**
+     * 开始自定义动画
+     *
+     * @param view      需要设置动画的View
+     * @param animation 动画（自行配置）
+     */
+    public static void startCustomAnim(View view, Animation animation) {
+        view.startAnimation(animation);
+    }
+
+    public static void stopCustomAnim(View view) {
+        if (view != null) {
+            view.clearAnimation();
+        }
+    }
+
     /**
      * 开始眨眼动画
      *
      * @param view 需要设置动画的View
      */
-    public static void startBlink(View view) {
+    public static void startWink(View view) {
         AlphaAnimation alphaAnimation = new AlphaAnimation(0.0f, 1.0f);
         alphaAnimation.setDuration(500);
         alphaAnimation.setStartOffset(20);
@@ -34,17 +64,50 @@ public final class EasyAnimation {
      * @param view           需要设置动画的View
      * @param alphaAnimation 透明度动画（自行配置）
      */
-    public static void startBlink(View view, AlphaAnimation alphaAnimation) {
+    public static void startWink(View view, AlphaAnimation alphaAnimation) {
         view.startAnimation(alphaAnimation);
     }
-
 
     /**
      * 停止眨眼动画
      *
      * @param view 需要清除动画的View
      */
-    public static void stopBlink(View view) {
+    public static void stopWink(View view) {
+        if (view != null) {
+            view.clearAnimation();
+        }
+    }
+
+    /**
+     * 开始心跳动画
+     *
+     * @param view 需要设置动画的View
+     */
+    public static void startHeartbeat(View view) {
+        ScaleAnimation scaleAnimation = new ScaleAnimation(0.5f, 1.0f, 0.5f, 1.0f, Animation.RELATIVE_TO_SELF, 0.5f, Animation.RELATIVE_TO_SELF, 0.5f);
+        scaleAnimation.setDuration(1000);
+        scaleAnimation.setRepeatMode(Animation.REVERSE);
+        scaleAnimation.setRepeatCount(Animation.INFINITE);
+        view.startAnimation(scaleAnimation);
+    }
+
+    /**
+     * 开始心跳动画
+     *
+     * @param view           需要设置动画的View
+     * @param scaleAnimation 缩放动画（自行配置）
+     */
+    public static void startHeartbeat(View view, ScaleAnimation scaleAnimation) {
+        view.startAnimation(scaleAnimation);
+    }
+
+    /**
+     * 停止心跳动画
+     *
+     * @param view 需要清除动画的View
+     */
+    public static void stopHeartbeat(View view) {
         if (view != null) {
             view.clearAnimation();
         }

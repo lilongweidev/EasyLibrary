@@ -23,4 +23,13 @@
         android:layout_gravity="end"
         android:layout_marginEnd="@dimen/dp_12" />
 
+    <TextView
+        android:id="@+id/tv_function"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_gravity="end"
+        android:textSize="@dimen/sp_14"
+        android:textColor="@color/white"
+        android:layout_marginEnd="@dimen/dp_12" />
+
 </com.google.android.material.appbar.MaterialToolbar>

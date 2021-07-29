@@ -5,4 +5,6 @@
     <string name="regex_used_tip">RegexUsed</string>
     <string name="toast_used_tip">ToastUsed</string>
     <string name="app_info_tip">AppInfo</string>
+    <string name="app_logcat">Logcat</string>
+    <string name="app_intent_tip">Intent</string>
 </resources>

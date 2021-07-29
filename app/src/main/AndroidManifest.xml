@@ -10,7 +10,9 @@
         android:roundIcon="@mipmap/ic_easy_logo"
         android:supportsRtl="true"
         android:theme="@style/Theme.EasyLibrary">
-        <activity android:name=".ui.LogActivity"></activity>
+        <activity android:name=".ui.AnimationActivity"></activity>
+        <activity android:name=".ui.IntentActivity" />
+        <activity android:name=".ui.LogActivity" />
         <activity android:name=".ui.AppInfoActivity" />
         <activity android:name=".ui.ToastActivity" />
         <activity
@@ -26,6 +28,21 @@
         <activity android:name=".ui.DateTimeActivity" />
         <activity android:name=".ui.SharedPreferencesActivity" />
         <activity android:name=".ui.RegexActivity" />
+
+
+        <!-- Android7.0以后读取文件需要配置Provider -->
+        <provider
+            android:name="androidx.core.content.FileProvider"
+            android:authorities="com.llw.easylibrary.fileprovider"
+            android:exported="false"
+            android:grantUriPermissions="true">
+
+            <!-- 元数据 -->
+            <meta-data
+                android:name="android.support.FILE_PROVIDER_PATHS"
+                android:resource="@xml/file_paths" />
+        </provider>
+
     </application>
 
 </manifest>

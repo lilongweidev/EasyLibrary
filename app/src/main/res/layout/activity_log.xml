@@ -178,18 +178,6 @@
 
     <com.google.android.material.button.MaterialButton
         android:id="@+id/btn_print_log"
-        android:layout_marginTop="@dimen/dp_60"
-        android:layout_marginStart="@dimen/dp_6"
-        android:layout_marginEnd="@dimen/dp_6"
-        android:layout_marginBottom="@dimen/dp_6"
-        android:layout_width="match_parent"
-        android:layout_height="@dimen/dp_50"
-        android:gravity="center"
-        android:insetTop="@dimen/dp_0"
-        android:insetBottom="@dimen/dp_0"
-        android:paddingStart="@dimen/dp_0"
-        android:paddingEnd="@dimen/dp_0"
-        android:text="打印日志"
-        android:textAllCaps="false"
-        android:textSize="@dimen/sp_16" />
+        style="@style/base_btn_style"
+        android:text="打印日志" />
 </LinearLayout>

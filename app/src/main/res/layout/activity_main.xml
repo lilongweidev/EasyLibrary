@@ -22,58 +22,11 @@
             android:textStyle="bold" />
     </androidx.appcompat.widget.Toolbar>
 
-    <LinearLayout
+    <!--主页面功能列表-->
+    <androidx.recyclerview.widget.RecyclerView
+        android:id="@+id/rv_function"
         android:layout_width="match_parent"
         android:layout_height="wrap_content"
-        android:layout_marginTop="@dimen/dp_8"
-        android:orientation="horizontal"
-        android:paddingStart="@dimen/dp_8"
-        android:paddingEnd="@dimen/dp_8">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_datetime_used"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_time_white"
-            android:text="@string/date_time_tip" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_shared_used"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_save_white"
-            android:text="@string/shared_pere_tip" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_regex_used"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_regex_white"
-            android:text="@string/regex_used_tip" />
-    </LinearLayout>
-
-    <LinearLayout
-        android:layout_width="match_parent"
-        android:layout_height="wrap_content"
-        android:orientation="horizontal"
-        android:paddingStart="@dimen/dp_8"
-        android:paddingEnd="@dimen/dp_8">
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_toast_used"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_toast_white"
-            android:text="@string/toast_used_tip" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_app_info"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_app_info_white"
-            android:text="@string/app_info_tip" />
-
-        <com.google.android.material.button.MaterialButton
-            android:id="@+id/btn_logcat"
-            style="@style/main_btn_style"
-            android:drawableTop="@drawable/ic_log_white"
-            android:text="Logcat" />
-
-    </LinearLayout>
+        android:overScrollMode="never" />
 
 </LinearLayout>

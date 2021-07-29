@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context=".ui.IntentActivity">
+
+    <include layout="@layout/title_layout" />
+
+    <ScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:overScrollMode="never">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical">
+
+            <TextView
+                style="@style/base_text_black"
+                android:text="拨号" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_phone_dial"
+                style="@style/base_btn_style"
+                android:text="手机拨号" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_phone_dial_input_number"
+                style="@style/base_btn_style"
+                android:text="手机拨号输入号码" />
+
+            <TextView
+                style="@style/base_text_black"
+                android:text="短信" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_phone_sms"
+                style="@style/base_btn_style"
+                android:text="手机短信" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_phone_sms_to_phone"
+                style="@style/base_btn_style"
+                android:text="给指定联系人发送手机短信" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_phone_sms_to_phone_add_content"
+                style="@style/base_btn_style"
+                android:text="给指定联系人发送定义好的短信内容" />
+
+            <TextView
+                style="@style/base_text_black"
+                android:text="相机" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_camera"
+                style="@style/base_btn_style"
+                android:text="打开相机" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_camera_get_uri"
+                style="@style/base_btn_style"
+                android:text="打开相机拍照后返回" />
+
+            <TextView
+                style="@style/base_text_black"
+                android:text="相册" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_album"
+                style="@style/base_btn_style"
+                android:text="打开相册方式1" />
+
+            <com.google.android.material.button.MaterialButton
+                android:id="@+id/btn_open_album_2"
+                style="@style/base_btn_style"
+                android:text="打开相册方式2" />
+        </LinearLayout>
+    </ScrollView>
+</LinearLayout>
